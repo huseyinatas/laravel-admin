@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.login {
+    @apply min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8;
+    .login-container {
+        @apply max-w-md w-full space-y-8;
+        .login-header {
+            img {
+                @apply mx-auto h-12 w-auto;
+            }
+
+            h2 {
+                @apply mt-6 text-center text-3xl font-extrabold text-gray-900;
+            }
+        }
+
+        .login-form {
+            @apply mt-8 space-y-6;
+            .input-group {
+                @apply rounded-md shadow-sm -space-y-px;
+                .input-container {
+                    label {
+                        @apply sr-only;
+                    }
+
+                    input {
+                        @apply appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm border-0 border-b mb-3;
+                    }
+                }
+            }
+
+            .actions {
+                @apply flex items-center justify-between;
+                .renember {
+                    @apply flex items-center;
+                    input {
+                        @apply h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded;
+                    }
+
+                    label {
+                        @apply ml-2 block text-sm text-gray-900;
+                    }
+                }
+
+                .forgot {
+                    @apply text-sm;
+                    a {
+                        @apply font-medium text-indigo-600 hover:text-indigo-500;
+                    }
+                }
+            }
+
+            .submit-btn {
+                button {
+                    @apply relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+                    span {
+                        @apply absolute left-0 inset-y-0 flex items-center pl-3;
+                        svg {
+                            @apply h-5 w-5 text-indigo-500 group-hover:text-indigo-400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+nav {
+    @apply bg-gray-800;
+    .nav{
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+        .nav-container{
+            @apply flex items-center justify-between h-16;
+            .nav-inner{
+                @apply flex items-center;
+                .logo{
+                    @apply flex-shrink-0;
+                    img{
+                        @apply h-8 w-8;
+                    }
+                }
+                .navs{
+                    @apply hidden md:block;
+                    .navbar{
+                        @apply ml-10 flex items-baseline space-x-4;
+                        .nav-item{
+                            @apply text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium;
+                            &.active{
+                                @apply bg-gray-900 text-white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+header{
+    @apply bg-white shadow;
+    .inner{
+        @apply max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8;
+        h1{
+            @apply text-3xl font-bold text-gray-900;
+        }
+    }
+}
